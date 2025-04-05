@@ -11,11 +11,14 @@ import axios from "axios";
 //     //we will send the cookies with every single credental requests 
 //     withCredentials: true, //this will send the cookies with every single credential request 
 // });
+// src/utils/axiosInstance.js or similar
+
 export const axiosInstance = axios.create({
   baseURL:
     import.meta.env.MODE === "development"
-      ? "http://localhost:5001/api"
-      : "https://chat-f5sz.onrender.com/api",  // ← this works fine!
+      ? "http://localhost:5001/api" // dev backend
+      : "https://chat-f5sz.onrender.com/api", // 🔥 your Render backend
+
   withCredentials: true,
 });
 
