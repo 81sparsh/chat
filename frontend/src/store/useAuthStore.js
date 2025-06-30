@@ -9,7 +9,7 @@ import { io } from "socket.io-client";
 
 const BASE_URL = import.meta.env.MODE === "development"
   ? "http://localhost:5001"
-  : "https://chat-mmln.onrender.com";
+  : "https://chat-1-qde5.onrender.com";
 
 const SOCKET_URL = BASE_URL;  // Keep base URL separate from API URL
 
