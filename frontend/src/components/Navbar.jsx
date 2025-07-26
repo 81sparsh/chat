@@ -8,7 +8,7 @@ import { getQuote } from "../api/quote"; // Your quote fetch function
 import { getHoroscope } from "../api/Horscope";
 import { getZodiacSign } from "../api/zodiac";
 import AstrologyPage from "./AstrologyPage"; // You must have this component
-import LoShuKuaModal from "./LoShuKuaModal";
+import LoShuKuaModal from "./LoShuKuaModel";
 
 const Navbar = () => {
   const { logout, authUser } = useAuthStore();
@@ -191,6 +191,10 @@ const Navbar = () => {
             <button onClick={() => { handleAstrologyToggle(); setIsMobileMenuOpen(false); }} className="btn btn-sm gap-2">
               <SunMoon className="w-4 h-4" />
               {showAstrology ? "Close Astrology" : "Astrology"}
+            </button>
+             <button onClick={() => { handleNumerologyToggle();  setIsMobileMenuOpen(false); }} className="btn btn-sm gap-2">
+              <SunMoon className="w-4 h-4" />
+              {showNumerology ? "Close Numerology" : "Numerology"}
             </button>
 
             <button onClick={() => { window.open('https://chess-0hn9.onrender.com', '_blank'); setIsMobileMenuOpen(false); }} className="btn btn-sm gap-2">
