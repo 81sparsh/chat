@@ -101,7 +101,8 @@ app.use(cookieParser()); //# ham cookieParser ko use karege because ham cookie k
 app.use(cors({ 
     origin: [
         "http://localhost:5173",
-        "https://chat-wheat-three-43.vercel.app"
+        // "https://chat-wheat-three-43.vercel.app"
+        "process.env.site"
     ],
     credentials: true,
     //ye basaically vercel pr host krne ka try kiya hai...but it is not working out properly..the reason of this is there might be several errors
